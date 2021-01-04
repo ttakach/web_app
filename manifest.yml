@@ -6,7 +6,7 @@ applications:
   random-route: true  # If set to false, Cloud Foundry will use the name above
   buildpacks:
     - https://github.com/cloudfoundry/ruby-buildpack.git#v1.7.23
-
+  stack: cflinuxfs3
 ##
 #
 # In the manifest.yml you create you can try the default buildpack
