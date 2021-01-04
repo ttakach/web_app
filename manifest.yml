@@ -1,0 +1,25 @@
+---
+applications:
+- name: web-app       # A default name for Cloud Foundry to give your app
+  memory: 64M         # The ammount of RAM required for each instance
+  disk_quota: 256M    # How much disk space the application needs
+  random-route: true  # If set to false, Cloud Foundry will use the name above
+  buildpacks:
+    - https://github.com/cloudfoundry/ruby-buildpack.git#v1.7.23
+
+##
+#
+# In the manifest.yml you create you can try the default buildpack
+#
+#  buildpacks:
+#    - ruby_buildpack  # Use the default Ruby buildpack
+#
+# or tracking the newesr buildpack available
+#
+#   buildpacks:
+#     - https://github.com/cloudfoundry/ruby-buildpack.git
+#
+# In this manifest we hardcoded the buildpack to v1.7.23 so the Lab will
+# still work in the future. Normally you would want to track newer versions
+# as they will give you warnings when parts of your application become old
+# or end of life
